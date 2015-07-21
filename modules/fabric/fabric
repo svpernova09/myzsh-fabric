@@ -1,4 +1,4 @@
 
-compdef _fabric fabric
+compdef _fab fab
 
 # vim: filetype=zsh noexpandtab

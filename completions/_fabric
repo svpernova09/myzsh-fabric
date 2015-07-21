@@ -1,15 +1,15 @@
-#compdef fabric
+#compdef fab
 
-_fabric () {
+_fab () {
     local -a verbs
     IFS=$'\n'
     # words[2] is whatever is already typed into the command line after "myzsh "
     case "$words[2]" in
-    deploy) # SSH into hosts
-        getvms running ssh
+    deploy) # Deploy to an environment
+        running deploy
     ;;
-    buildout) # SSH into hosts
-        getvms running ssh
+    buildout) # Buildout and Environment
+        running buildout
     ;;
     # FIXME this could be done better, fixing [LPRIMARY,LSECONDARY,...] files ...
     *)
@@ -22,6 +22,6 @@ _fabric () {
     return 1
 }
 
-_fabric "$@"
+_fab "$@"
 
 # vim: filetype=zsh noexpandtab
