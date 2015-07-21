@@ -8,7 +8,7 @@ This is a module and completion script for [myzsh](https://github.com/myzsh/myzs
 
 ## Installation
 
-* `myzsh remote add https://github.com/svpernova09/myzsh-fabirc`
+* `myzsh remote add https://github.com/svpernova09/myzsh-fabric`
 
 ## Usage
 
