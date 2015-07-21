@@ -1,4 +1,4 @@
-#compdef fab
+#compdef fabric
 
 _fabric () {
     local -a verbs
