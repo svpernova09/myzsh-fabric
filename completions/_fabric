@@ -1,6 +1,6 @@
-#compdef fab
+#compdef go
 
-_fab () {
+_fabric () {
     local -a verbs
     IFS=$'\n'
     # words[2] is whatever is already typed into the command line after "myzsh "
@@ -22,6 +22,6 @@ _fab () {
     return 1
 }
 
-_fab "$@"
+_fabric "$@"
 
 # vim: filetype=zsh noexpandtab
