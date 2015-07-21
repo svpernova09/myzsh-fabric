@@ -8,7 +8,7 @@ _fabric () {
     deploy) # Deploy to an environment
         running deploy
     ;;
-    buildout) # Buildout and Environment
+    buildout) # Buildout an Environment
         running buildout
     ;;
     # FIXME this could be done better, fixing [LPRIMARY,LSECONDARY,...] files ...
