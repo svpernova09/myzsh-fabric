@@ -1,0 +1,27 @@
+#compdef fabric
+
+_fabric () {
+    local -a verbs
+    IFS=$'\n'
+    # words[2] is whatever is already typed into the command line after "myzsh "
+    case "$words[2]" in
+    deploy) # SSH into hosts
+        getvms running ssh
+    ;;
+    buildout) # SSH into hosts
+        getvms running ssh
+    ;;
+    # FIXME this could be done better, fixing [LPRIMARY,LSECONDARY,...] files ...
+    *)
+        verbs=(
+            "deploy:deploy:<env> Deploy to environment"
+            "buildout:buildout:<env> Buildout environment"
+        )
+        _describe -t commands 'myzsh commands' verbs -V1;;
+    esac
+    return 1
+}
+
+_fabric "$@"
+
+# vim: filetype=zsh noexpandtab
